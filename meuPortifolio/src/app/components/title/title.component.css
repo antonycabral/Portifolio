@@ -1,0 +1,100 @@
+.title-container{
+    height: 90vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+    background-image: url('/assets/imgbk01.png'); /* caminho para a imagem */
+    background-size: cover; /* cobre todo o container */
+    background-position: center; /* centraliza a imagem */
+    background-repeat: no-repeat; /* evita que a imagem se repita */
+    overflow: hidden; /* centraliza a imagem */
+    
+
+    & .title-title{
+        width: 700px;
+        height: 150px;
+        padding: 5px;
+        margin-top: 15px;
+        font-size: 1.75rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        & h1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        & h2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            width: 1000px;
+            padding: 5px;
+        }
+    }
+
+    & .title-descricao{
+        position: relative;
+        z-index: 2; /* Garante que o conteúdo fique acima da película */
+        color: white;
+        text-align: center; /* Centraliza o texto */
+        padding: 5px;
+    }
+
+    & .title-btn{
+
+        position: relative;
+        z-index: 2; /* Garante que o conteúdo fique acima da película */
+        background-color: #5A6ED8;
+        padding: 0 auto;
+        width: 170px;
+        height: 40px;
+        border-radius: 10px;
+        border: none;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 20px;
+        cursor: pointer;
+
+        list-style: none;
+
+        & a{
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+        }
+
+    }
+
+}
+
+.title-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 50vw;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor e opacidade da película */
+    z-index: 1; /* Garante que a película fique entre a imagem e o conteúdo */
+}
+
+/* Estilo do conteúdo */
+.title-title {
+    position: relative;
+    z-index: 2; /* Garante que o conteúdo fique acima da película */
+    color: white;
+    text-align: center; /* Centraliza o texto */
+}

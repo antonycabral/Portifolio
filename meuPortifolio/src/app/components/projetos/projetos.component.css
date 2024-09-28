@@ -1,0 +1,52 @@
+.project-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 75px;
+
+    & .project-title{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 90%;
+
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    & .projetos-card{
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        width: 99%;
+    }
+
+    & app-projeto-card {
+        flex: 0 1 calc(33.33% - 10px); /* 3 cards por linha com espaçamento */
+        margin-bottom: 10px; /* Espaçamento entre linhas */
+    }
+
+    /* Media Queries para responsividade */
+    @media (max-width: 768px) {
+        & app-projeto-card {
+            flex: 0 1 calc(50% - 10px); /* 2 cards por linha em telas médias */
+        }
+    }
+
+    @media (max-width: 480px) {
+        & app-projeto-card {
+            flex: 0 1 100%; /* 1 card por linha em telas pequenas */
+            margin-bottom: 150px; /* Espaçamento maior entre os cards em tela pequena */
+        }
+
+        & .projetos-card {
+            flex-direction: column; /* Alinha os cards em coluna */
+            align-items: stretch; /* Faz os cards ocuparem toda a largura */
+        }
+    }
+}
