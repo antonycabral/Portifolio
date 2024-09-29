@@ -1,14 +1,40 @@
 .card-tech-container{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
-    width: 80%;
-    height: 80%;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: rgb(19, 21, 80);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s;
-    
+    justify-content: flex-start; /* Alinha os itens no início */
+
+    & .box-topic{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start; /* Alinha os itens no início */
+        width: 100%; /* Ocupa toda a largura do container */
+
+
+        & .number{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background-color: #5A6ED8;
+            margin-left: 15px;
+        }
+    }
+
+    .text-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Alinha o texto à esquerda */
+        justify-content: center;
+        margin-left: 5px; /* Espaço entre o número e o texto */
+
+        & .topic-title{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
 }

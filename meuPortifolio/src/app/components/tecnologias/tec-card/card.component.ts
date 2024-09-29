@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'tec-app-card',
@@ -7,6 +7,16 @@ import { Component } from '@angular/core';
   templateUrl: './card.component.html',
   styleUrl: './card.component.css'
 })
-export class TechCardComponent {
+export class TechCardComponent implements OnInit {
 
+  @Input()
+  tecNumber:string =""
+  @Input()
+  tecTitle:string=""
+  @Input()
+  tecDesc:string=""
+
+  ngOnInit(): void {
+      
+  }
 }

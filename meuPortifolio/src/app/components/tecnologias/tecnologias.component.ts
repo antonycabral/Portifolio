@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { TechCardComponent } from "./tec-card/card.component";
 
 @Component({
@@ -8,6 +8,16 @@ import { TechCardComponent } from "./tec-card/card.component";
   templateUrl: './tecnologias.component.html',
   styleUrl: './tecnologias.component.css'
 })
-export class TecnologiasComponent {
+export class TecnologiasComponent implements OnInit {
 
+  @Input()
+  tecNumber:string =""
+  @Input()
+  tecTitle:string=""
+  @Input()
+  tecDesc:string=""
+
+  ngOnInit(): void {
+      
+  }
 }
