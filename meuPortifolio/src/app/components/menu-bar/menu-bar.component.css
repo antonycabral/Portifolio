@@ -1,15 +1,18 @@
 .navbar {
-    background-color: #00042863; /* Cor de fundo escura com transparência */
-    padding: 10px 20px; /* Espaçamento interno */
-    position: fixed; /* Fixa o menu no topo */
+    background-color: #00042863;
+    padding: 10px 20px;
+    position: fixed;
     top: 0;
-    width: 100%; /* Largura total */
-    z-index: 1000; /* Garante que fique acima de outros elementos */
-
+    width: 100%;
+    z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    flex-direction: row;
+    flex-wrap: nowrap;
+    @media (max-width: 768px) {
+        padding: 10px; /* Ajusta o espaçamento */
+    }
 }
 
 .navbar ul {
@@ -18,18 +21,90 @@
     padding: 0; /* Remove preenchimento */
     display: flex; /* Alinha os itens na horizontal */
     align-items: center;
+
+    @media (max-width: 768px) {
+        display: none; /* Esconde o menu por padrão em telas menores */
+        flex-direction: column; /* Muda para coluna em telas menores */
+        width: 100%; /* Largura total em telas menores */
+        align-items: flex-start; /* Alinha os itens à esquerda */
+    }
+}
+
+.navbar.active ul {
+    display: flex; /* Exibe o menu quando a classe 'active' é adicionada */
+}
+
+.navbar .hamburger {
+    display: none; /* Esconde o ícone hamburguer por padrão */
+
+    @media (max-width: 768px) {
+        display: flex; /* Exibe o ícone hamburguer em telas menores */
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 20px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
 }
 
 .navbar li {
     margin-right: 20px; /* Espaçamento entre os itens */
+
+    @media (max-width: 768px) {
+        margin-right: 0; /* Remove o espaçamento lateral em telas menores */
+        margin-bottom: 10px; /* Adiciona espaçamento entre os itens */
+    }
 }
 
 .navbar a {
     color: white; /* Cor do texto */
     text-decoration: none; /* Remove o sublinhado */
     font-weight: bold; /* Deixa o texto em negrito */
+
+    @media (max-width: 768px) {
+        font-size: 1.1rem; /* Ajusta o tamanho da fonte */
+    }
 }
 
 .navbar a:hover {
     text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
+
+/* Adicione essas classes */
+.hamburger {
+    display: none; /* Esconde o hamburguer por padrão */
+  }
+  
+  .hamburger div {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    transition: all 0.3s linear;
+  }
+  
+  .navbar.active ul {
+    display: flex; /* Exibe o menu quando a classe 'active' é adicionada */
+  }
+  
+  /* Altere essa media query */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex; /* Exibe o hamburguer em telas menores */
+      flex-direction: column;
+      justify-content: space-around;
+      width: 30px;
+      height: 20px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      margin-right: 50px;
+    }
+    .navbar ul {
+        display: none; /* Esconde o menu por padrão em telas menores */
+    }
+    .navbar.active ul {
+        display: block; /* Exibe o menu quando a classe 'active' é adicionada */
+    }
+  }

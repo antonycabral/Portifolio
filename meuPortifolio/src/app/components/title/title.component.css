@@ -14,10 +14,13 @@
     background-repeat: no-repeat; /* evita que a imagem se repita */
     overflow: hidden; /* centraliza a imagem */
     
+    @media (max-width: 768px) {
+        height: 70vh; /* Reduz a altura em telas menores */
+    }
 
     & .title-title{
         width: 700px;
-        height: 150px;
+        height: auto;
         padding: 5px;
         margin-top: 15px;
         font-size: 1.75rem;
@@ -26,11 +29,20 @@
         flex-direction: column;
         align-items: center;
 
+        @media (max-width: 768px) {
+            width: 90%; /* Ajusta a largura em telas menores */
+            font-size: 1.5rem; /* Reduz o tamanho da fonte */
+        }
+
         & h1{
             display: flex;
             justify-content: center;
             align-items: center;
             margin-bottom: 10px;
+
+            @media (max-width: 768px) {
+                font-size: 1.5rem; /* Reduz o tamanho da fonte */
+            }
         }
 
         & h2{
@@ -40,6 +52,11 @@
             font-size: 2rem;
             width: 1000px;
             padding: 5px;
+
+            @media (max-width: 768px) {
+                font-size: 1.75rem; /* Reduz o tamanho da fonte */
+                width: 90%; /* Ajusta a largura */
+            }
         }
     }
 
@@ -49,6 +66,10 @@
         color: white;
         text-align: center; /* Centraliza o texto */
         padding: 5px;
+
+        @media (max-width: 768px) {
+            font-size: 0.9rem; /* Ajusta o tamanho da fonte */
+        }
     }
 
     & .title-btn{
@@ -77,6 +98,12 @@
             font-size: 1rem;
         }
 
+        @media (max-width: 768px) {
+            width: 150px; /* Ajusta a largura do botão */
+            height: 35px; /* Ajusta a altura do botão */
+            font-size: 0.9rem; /* Reduz o tamanho da fonte do botão */
+        }
+
     }
 
 }
@@ -89,6 +116,10 @@
     height: 90vh;
     background-color: rgba(0, 0, 0, 0.5); /* Cor e opacidade da película */
     z-index: 1; /* Garante que a película fique entre a imagem e o conteúdo */
+
+    @media (max-width: 768px) {
+        height: 70vh; /* Reduz a altura em telas menores */
+    }
 }
 
 /* Estilo do conteúdo */
