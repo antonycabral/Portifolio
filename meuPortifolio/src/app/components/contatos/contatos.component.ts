@@ -20,4 +20,7 @@ export class ContatosComponent {
   @Input()
   ContactDesc:string=""
 
+  @Input()
+  contactLink:string=""
+
 }

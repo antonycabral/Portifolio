@@ -19,7 +19,7 @@
     }
 
     & .tecCard{
-        width: 80vw;
+        width: 70vw;
         height: 50vh; /* Ajuste a altura conforme necessário */
         display: flex;
         flex-wrap: wrap; /* Permite que os itens sejam distribuídos em várias linhas */

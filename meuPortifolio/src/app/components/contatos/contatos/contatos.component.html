@@ -1,14 +1,14 @@
 <div class="dados-contato-container">
     <div class="dados-container">
         <img src="{{ContactImg}}"
-        width="75px"
-        height="75px"
+        width="65px"
+        height="65px"
         alt="imagem ilustrativa" srcset="">
         <div class="container-title">
             <h1>{{ContactTitle}}</h1>
         </div>
         <div class="dados-dados">
-            <a href="">
+            <a [href]="contactLink" target="_blank" rel="noopener noreferrer">
                 <p>{{ContactDesc}}</p>
             </a>
         </div>
