@@ -1,25 +1,26 @@
-.card-servico-container{
+.card-servico-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    width: 35vw;
-    height: 20vh;
+    width: 95%; /* Ajuste a largura para 80% do card principal */
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
 
+    border-radius: 10px; /* Reduzir o raio para bordas mais sutis */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ajusta a sombra para um efeito mais leve */
+    padding: 15px; /* Adiciona um padding interno para melhorar a estética */
 
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.397);
+    background-color: #5A6ED8; /* Defina uma cor de fundo para os cards */
+    color: white; /* Mantém a cor do texto em branco para contraste */
+}
 
-    & .card-title{
-        color: white;
-        font-size: 1rem;
-        font-weight: bold;
-        margin-left: 1rem;
-    }
+.card-title {
+    font-size: 1rem; /* Tamanho da fonte do título */
+    font-weight: bold;
+    margin-bottom: 10px; /* Reduz o espaço abaixo do título */
+}
 
-    & .card-desc{
-        color: white;
-        font-size: 1rem;
-        margin-left: 1rem;
-    }
+.card-desc {
+    font-size: 0.9rem; /* Tamanho da fonte da descrição, menor para não ocupar muito espaço */
+    line-height: 1.4; /* Melhora a legibilidade com mais espaço entre as linhas */
 }

@@ -1,6 +1,6 @@
-.projeto-card-container{
-    height: 60vh;
-    width: 30vw;
+.projeto-card-container {
+    height: auto; /* Deixa a altura flexível */
+    width: 30vw; /* Largura inicial em telas grandes */
 
     display: flex;
     flex-direction: column;
@@ -11,20 +11,46 @@
     padding: 10px;
 
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.397);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 
-    & .card-title{
+    /* Responsividade para telas grandes */
+    & .card-title {
         font-size: 1.2rem;
         font-weight: bold;
     }
 
-    & .card-description{
+    & .card-description {
         font-size: 1rem;
         text-align: justify;
     }
 
-    & .card-img-img{
-        min-width: 90%;
-        min-height: 90%;
+    & .card-img-img {
+        width: 100%; /* A imagem agora ocupa 100% da largura do card */
+        height: auto; /* Mantém a proporção da imagem */
+        object-fit: cover; /* Garante que a imagem se encaixe sem distorção */
+        border-radius: 10px;
+    }
+}
+
+/* Media Queries para telas médias */
+@media (max-width: 768px) {
+    .projeto-card-container {
+        width: 45vw; /* Cards maiores em telas menores */
+    }
+}
+
+/* Media Queries para telas pequenas (celulares) */
+@media (max-width: 480px) {
+    .projeto-card-container {
+        width: 90vw; /* Ocupa quase toda a tela em celulares */
+        margin-bottom: 20px; /* Aumenta o espaçamento entre os cards */
+    }
+
+    .card-title {
+        font-size: 1rem; /* Diminui o tamanho do texto */
+    }
+
+    .card-description {
+        font-size: 0.9rem; /* Texto levemente menor */
     }
 }

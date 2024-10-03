@@ -1,49 +1,63 @@
-.contato-container{
+.contato-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center; /* Mudei para flex-start para alinhar os itens no topo */
     margin-top: 75px;
+}
 
-    & .contato{
+.contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin-bottom: 5px;
+
+    .contato-title {
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
         justify-content: flex-start;
-        align-items: center;
-        width: 90%;
-        margin-bottom: 5px;
+        width: 98%;
 
-        & .contato-title{
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
-            width: 100%;
-            font-size: 1.25rem;
-            font-weight: bold;
-            margin-bottom: 12vh;
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .contato-dados-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; /* Permite a quebra de linha dos cards */
+        justify-content: center; /* Centraliza os cards horizontalmente */
+        margin: 10px 0;
+    }
+
+    .dados-direction {
+        display: flex;
+        flex-direction: row; /* Mantenha como row para que os dados fiquem em linha */
+        flex-wrap: wrap; /* Permite que os dados se ajustem em várias linhas */
+        justify-content: center; /* Centraliza os cards */
+        gap: 20px; /* Espaçamento entre os cards */
+        width: 100%; /* Garante que ocupa toda a largura disponível */
+    }
+
+    .img-container {
+        display: none; /* Oculta a imagem por padrão */
+        margin-top: 20px; /* Margem para separar a imagem da seção anterior */
+    }
+
+    /* Exibe a imagem em telas maiores */
+    @media (min-width: 768px) {
+        .img-container {
+            display: flex; /* Exibe a imagem em telas maiores */
+            justify-content: center; /* Centraliza a imagem horizontalmente */
+            margin-top: 20px; /* Margem para separar da seção anterior */
         }
 
-        & .contato-dados-container{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: nowrap;
-                
-
-            & .contato-dados{
-                font-size: 1rem;
-                font-weight: 500;
-            }
-
-            & .dados-direction app-contatos-dados{
-                margin-right: 30px;
-            }
-
-            & .dados-direction {
-                margin-right: 30px;
-            }
+        .contato-img {
+            width: 500px; /* Largura da imagem */
+            height: auto; /* Mantém a proporção da imagem */
         }
     }
 }

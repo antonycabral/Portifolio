@@ -1,35 +1,32 @@
-.servico-container{
+.servico-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 75px;
+}
 
-    & .servico-title{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        width: 90%;
+.servico-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 90%;
+    font-size: 1.5rem; /* Tamanho da fonte do título */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
 
-        font-size: 1.25rem;
-        font-weight: bold;
-        margin-bottom: 20px;
-    }
+.card-servico {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cards sejam distribuídos em várias linhas */
+    align-items: center;
+    justify-content: center; /* Centraliza os cards */
+    margin: 5px;
+}
 
-    & .card-servico{
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        flex-direction: row;
-        align-content: flex-start;
-
-        margin: 5px;
-    }
-    .card-servico app-card-servico{
-        width: 35vw;
-        height: 20vh;
-        margin: 20px;
-    }
+.card-servico app-card-servico {
+    margin: 20px; /* Espaçamento entre os cards */
+    flex: 1 1 300px; /* Permite que os cards se ajustem responsivamente */
+    max-width: 300px; /* Largura máxima para os cards */
 }

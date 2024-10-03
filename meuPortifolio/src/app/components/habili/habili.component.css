@@ -1,12 +1,11 @@
-.hab-container{
+.hab-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 75px;
-
-
-    & .habi-title{
+    
+    & .habi-title {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -18,11 +17,32 @@
     }
 }
 
-.appcard{
+.appcard {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap; /* Permite que os cards quebrem linha quando necessário */
     align-items: center;
     justify-content: space-between;
     margin-bottom: 10px;
     width: 90%;
+}
+
+/* Definição de tamanho flexível para os cards */
+app-card {
+    flex: 0 1 calc(25% - 10px); /* Quatro cards por linha em telas grandes */
+    margin-bottom: 10px;
+}
+
+/* Responsividade para telas médias */
+@media (max-width: 768px) {
+    app-card {
+        flex: 0 1 calc(50% - 10px); /* Dois cards por linha em tablets ou telas médias */
+    }
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 480px) {
+    app-card {
+        flex: 0 1 100%; /* Um card por linha em celulares */
+        margin-bottom: 20px;
+    }
 }

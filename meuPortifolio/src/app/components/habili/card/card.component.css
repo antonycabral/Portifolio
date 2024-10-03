@@ -1,4 +1,4 @@
-.card-container{
+.card-container {
     width: 300px;
     height: 300px;
     margin: 5px;
@@ -11,45 +11,79 @@
     text-align: center;
 
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.363);
+}
 
-    
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    margin: 15px;
+    padding: 10px;
+}
 
-    & .card{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        
-        width: 200px;
-        height: 200px;
+.card-title h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
 
-        margin: 15px;
-        padding: 10px;
+.card-content p {
+    font-size: 1.1rem;
+    margin: 5px;
+    width: 100%; /* Ajusta a largura para preencher o container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
-
-        & .card-title h1{
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            padding: auto;
-            margin-top: 5px;
-        }
-
-        & .card-content p {
-            width: 20vw;
-            font-size: 1.1rem;
-            margin: 5px;
-            padding: auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-
-            
-        }
+/* Responsividade para telas médias */
+@media (max-width: 768px) {
+    .card-container {
+        width: 80%; /* Ajusta a largura do container para telas médias */
+        height: auto; /* Deixa a altura flexível */
+        margin-bottom: 20px;
     }
 
+    .card {
+        width: 100%;
+        height: auto; /* Deixa a altura flexível */
+    }
 
+    .card-title h1 {
+        font-size: 1.8rem;
+    }
 
+    .card-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 480px) {
+    .card-container {
+        width: 100%; /* Ocupa toda a largura da tela */
+        height: auto;
+        padding: 5px;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .card-title h1 {
+        font-size: 1.5rem; /* Diminui o tamanho do título para caber melhor */
+    }
+
+    .card-content p {
+        font-size: 0.9rem; /* Ajusta o tamanho da fonte para telas pequenas */
+    }
 }

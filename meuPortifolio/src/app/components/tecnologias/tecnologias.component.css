@@ -1,37 +1,42 @@
-.tec-container{
+.tec-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 75px;
     margin-bottom: 75px;
+}
 
-    & .tec-title{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        width: 90%;
+.tec-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 90%;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
 
-        font-size: 1.25rem;
-        font-weight: bold;
-        margin-bottom: 20px;
-    }
+.tecCard {
+    width: 70vw;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens sejam distribuídos em várias linhas */
+    justify-content: space-around;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.288);
+    border-radius: 15px;
+    padding: 20px;
+}
 
-    & .tecCard{
-        width: 70vw;
-        height: 50vh; /* Ajuste a altura conforme necessário */
-        display: flex;
-        flex-wrap: wrap; /* Permite que os itens sejam distribuídos em várias linhas */
-        align-items: center;
-        justify-content: space-around; /* Espaça os itens uniformemente */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.288);
-        border-radius: 15px;
-        flex-direction: row;
-    }
+.tecCard tec-app-card {
+    width: 45%; /* Ajuste para que dois itens apareçam por linha */
+    margin-bottom: 20px; /* Espaçamento vertical entre os itens */
+}
 
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
     .tecCard tec-app-card {
-        width: 45%; /* Ajuste a largura para caber dois itens por linha */
-        /* Espaçamento entre os itens */
+        width: 100%; /* Cards ocupam toda a largura em telas menores */
+        margin-bottom: 15px;
     }
 }

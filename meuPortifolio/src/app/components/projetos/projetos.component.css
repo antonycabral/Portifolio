@@ -32,6 +32,12 @@
     }
 
     /* Media Queries para responsividade */
+    @media (max-width: 1024px) {
+        & app-projeto-card {
+            flex: 0 1 calc(50% - 10px); /* 2 cards por linha em telas médias/grandes */
+        }
+    }
+
     @media (max-width: 768px) {
         & app-projeto-card {
             flex: 0 1 calc(50% - 10px); /* 2 cards por linha em telas médias */
@@ -41,7 +47,7 @@
     @media (max-width: 480px) {
         & app-projeto-card {
             flex: 0 1 100%; /* 1 card por linha em telas pequenas */
-            margin-bottom: 150px; /* Espaçamento maior entre os cards em tela pequena */
+            margin-bottom: 20px; /* Espaçamento menor entre os cards */
         }
 
         & .projetos-card {

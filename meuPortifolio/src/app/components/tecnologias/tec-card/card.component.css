@@ -1,40 +1,48 @@
-.card-tech-container{
+.card-tech-container {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start; /* Alinha os itens no início */
+    justify-content: flex-start; /* Alinha o conteúdo ao início */
+    width: 100%;
+    margin: 10px 0; /* Espaçamento vertical entre os itens */
+}
 
-    & .box-topic{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start; /* Alinha os itens no início */
-        width: 100%; /* Ocupa toda a largura do container */
+.box-topic {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%; /* Ocupa toda a largura do container */
+}
 
+.number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Ajuste do tamanho do número */
+    height: 40px;
+    background-color: #5A6ED8;
+    border-radius: 50%; /* Número dentro de um círculo */
+    color: white; /* Cor do número */
+    font-weight: bold;
+    margin-right: 15px;
+}
 
-        & .number{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            width: 30px;
-            height: 30px;
-            background-color: #5A6ED8;
-            margin-left: 15px;
-        }
-    }
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; /* Alinha o texto à esquerda */
+    margin-left: 10px; /* Espaçamento entre o número e o texto */
+}
 
-    .text-container{
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Alinha o texto à esquerda */
-        justify-content: center;
-        margin-left: 5px; /* Espaço entre o número e o texto */
+.topic-title h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0; /* Remove margem para melhor alinhamento */
+}
 
-        & .topic-title{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-    }
+.box-desc p {
+    font-size: 1rem;
+    margin-top: 5px;
+    text-align: left; /* Alinhamento do texto à esquerda */
 }
